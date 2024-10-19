@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/estilo.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bienvenido al sistema!!!!!!</h1>
+    </header>
+
+    <div class="container">
+        <div class="card">
+            <figure>
+                <img src="{{ url_for('static', filename='images/testimonio.jpg') }}" alt="Testimonio">
+            </figure>
+            <div class="contenido">
+                <h3>Bienveniido!!</h3>
+                <p>
+                    {%if usuario :%}
+                    {%for item in usuario%}
+                    <b><p>{{item.nombre}}</p></b>
+                    {%endfor%}
+                {%else%}
+                <p>Inicio de seccion sin usuario</p>
+                {%endif%}
+                <a href="{{url_for('cerra')}}">Cerrar secion</a>
+                </p>
+            </div>
+        </div>
+        </div>
+    
+</body>
+</html>

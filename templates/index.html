@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de secion</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='CSS/estilo.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <figure>
+                <img src="{{ url_for('static', filename='images/testimonio.jpg') }}" alt="Testimonio">
+            </figure>
+            <div class="contenido">
+                <h3>Inicio de secion</h3>
+                <p>
+                    <form action="/valida" method="post">
+                        <label for="">Usuario</label>
+                        <input type="text" name="usuario">
+                        <br>
+                        <label for="">Contrasena</label>
+                        <input type="password" name="contra">
+                        <br>
+                        <input type="submit" value="Ingresar">
+                    </form>.
+                </p>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
